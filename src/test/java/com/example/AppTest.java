@@ -37,8 +37,9 @@ public class AppTest {
 
     @Test
     public void returnNumberOfPersons() {
-        App person = new App();
-        App person2 = new App();
+        for (int i = 0; i < 2; i++) {
+            App person2 = new App();
+        }
 
         assertEquals(2, App.numberOfPersons());
 
