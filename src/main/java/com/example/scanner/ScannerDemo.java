@@ -21,6 +21,8 @@ public class ScannerDemo {
     shoeSize = scanner.nextFloat();
 
     System.out.println("My Name is " + name + " " + age + " " + shoeSize);
+
+    scanner.close();
   }
 
 }
