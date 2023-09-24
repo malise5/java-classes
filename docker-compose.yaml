@@ -1,0 +1,39 @@
+services:
+    # MySQL Service
+    intro:
+        image: mysql:latest # Use the latest MySQL image
+        container_name: intro # Name the container as "intro"
+        restart: always # Restart policy: always
+        environment:
+            MYSQL_DATABASE: "intro" # MySQL database name
+            MYSQL_USER: "kudez" # MySQL user name
+            MYSQL_PASSWORD: "123456" # MySQL user password
+            MYSQL_ROOT_PASSWORD: "root" # Root password for MySQL
+        ports:
+            #HOST-PORT:CONTAINER-PORT
+            - "3308:3306" # Map host port 3308 to container port 3306
+        expose:
+            - "3306" # Expose container port 3306
+            - "3308" # Expose container port 3308
+        volumes:
+            - my-db:/var/lib/mysql # Mount volume for MySQL data
+
+    # PostgreSQL Service
+    intro-postgres:
+        image: postgres:latest # Use the latest PostgreSQL image
+        container_name: intro-postgres # Name the container as "intro-postgres"
+        restart: always # Restart policy: always
+        environment:
+            POSTGRES_USER: "kudez" # PostgreSQL user name
+            POSTGRES_PASSWORD: "123456" # PostgreSQL user password
+            POSTGRES_DB: "intro" # PostgreSQL database name
+        ports:
+            - "5432:5432" # Map host port 5432 to container port 5432
+        expose:
+            - "3306" # Expose container port 3306 (note: should be 5432 for PostgreSQL)
+        volumes:
+            - intro-postgres:/var/lib/postgresql/data # Mount volume for PostgreSQL data
+
+volumes:
+    my-db: # Define a volume named "my-db" for MySQL
+    intro-postgres: # Define a volume named "intro-postgres" for PostgreSQL

@@ -1,27 +1,52 @@
 package com.example.exceptions;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class ExceptionDemo {
 
-  public static void main(String[] args) throws MyException {
-    int i = 20;
-    int j = 0;
+  public static void main(String[] args) {
+    ExceptionDemo app = new ExceptionDemo();
 
+    app.workingWithException();
+
+    app.scannerInput();
+  }
+
+  private Student scannerInput() {
+    Student student = new Student();
+    Scanner scanner = new Scanner(System.in);
     try {
-      j = 18 / i;
-      if (j == 0) {
-        throw new MyException("Can not be a Zero");
-      }
-      System.out.println(j);
-    } catch (MyException e) {
-      System.out.println("van not divide " + e.getMessage());
+      System.out.print("Enter Your Details: ");
+      String name = scanner.next();
+      student.setName(name);
+
+      String regNo = scanner.next();
+      student.setRegNo(regNo);
+
+      String email = scanner.next();
+      student.setEmail(email);
+
+    } catch (InputMismatchException e) {
+      System.out.println("Input error: ");
+    } finally {
+      scanner.close();
+      System.out.println("Released resources");
     }
 
+    return student;
   }
 
-}
-
-class MyException extends Exception {
-  public MyException(String message) {
-    super(message);
+  private void workingWithException() {
+    StudentController studentController = new StudentController();
+    try {
+      studentController.addStudent(scannerInput());
+    } catch (MissingException e) {
+      System.out.println(e.getMessage());
+    } finally {
+      studentController = null;
+      System.out.println("Garbage collected");
+    }
   }
+
 }
