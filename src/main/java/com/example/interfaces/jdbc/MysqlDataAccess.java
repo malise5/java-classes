@@ -20,8 +20,8 @@ public class MysqlDataAccess implements DataAccess {
   public Connection connect() {
     try {
       Connection connection = DriverManager.getConnection(
-          "url",
-          "username",
+          "jdbc:mysql://localhost:3306/test",
+          "rootuser",
           "password");
       return connection;
     } catch (SQLException e) {

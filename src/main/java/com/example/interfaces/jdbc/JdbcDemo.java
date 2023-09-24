@@ -7,7 +7,7 @@ public class JdbcDemo {
     DataAccess mysql = new MysqlDataAccess();
 
     mysql.connect();
-    ResultSet user = mysql.executeQuery("SELECT * FROM users");
+    ResultSet user = mysql.executeQuery("SELECT * FROM test");
     mysql.close();
   }
 }
