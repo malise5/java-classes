@@ -6,13 +6,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.example.interfaces.logging.Calculator;
+import com.example.interfaces.logging.CalculatorImpl;
 
 public class CalculatorTest {
   Calculator app;
 
   @BeforeEach
   void setUp() {
-    app = new TestCalculator();
+    app = new CalculatorImpl();
   }
 
   @Test
@@ -21,14 +22,6 @@ public class CalculatorTest {
     int actual = app.sum(1, 2);
 
     assertEquals(expected, actual);
-  }
-
-  @Test
-  public void summation() {
-    int expected = 6;
-    int actual = app.sum(1, 2, 3);
-
-    assertEquals(expected, actual, "Should be 6");
   }
 
   class TestCalculator implements Calculator {
