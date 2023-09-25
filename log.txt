@@ -1,6 +1,6 @@
-2023-09-25 14:55:13 || main || INFO || info Message Logging
-2023-09-25 14:55:13 || main || SEVERE || Error Message
-2023-09-25 14:55:13 || main || WARNING || Warning Message Logn
-2023-09-25 14:55:13 || test || INFO || info Message Logging
-2023-09-25 14:55:13 || test || SEVERE || Error Message
-2023-09-25 14:55:13 || test || WARNING || Warning Message Logn
+2023-09-25 14:57:47 || main || INFO || info Message Logging
+2023-09-25 14:57:48 || main || SEVERE || Error Message
+2023-09-25 14:57:48 || main || WARNING || Warning Message Logn
+2023-09-25 14:57:48 || test || INFO || info Message Logging
+2023-09-25 14:57:48 || test || SEVERE || Error Message
+2023-09-25 14:57:48 || test || WARNING || Warning Message Logn
