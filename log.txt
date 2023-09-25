@@ -1,0 +1,6 @@
+main || INFO || info Message Logging
+main || SEVERE || Error Message
+main || WARNING || Warning Message Logn
+test || INFO || info Message Logging
+test || SEVERE || Error Message
+test || WARNING || Warning Message Logn
