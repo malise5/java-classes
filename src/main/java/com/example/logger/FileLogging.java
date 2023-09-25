@@ -1,10 +1,10 @@
 package com.example.logger;
 
 import java.io.IOException;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
+// import java.time.Instant;
+// import java.time.LocalDateTime;
+// import java.time.ZoneId;
+// import java.time.format.DateTimeFormatter;
 import java.util.logging.*;
 // import java.util.logging.Formatter;
 // import java.util.logging.LogRecord;
@@ -33,21 +33,23 @@ public class FileLogging {
     LOGGER.warning("Warning Message Logn\n");
   }
 
-  static class CustomFormatter extends Formatter {
+  // static class CustomFormatter extends Formatter {
 
-    @Override
-    public String format(LogRecord record) {
+  // @Override
+  // public String format(LogRecord record) {
 
-      DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyy-MM-dd HH:mm:ss");
-      String method = record.getSourceMethodName();
-      String level = record.getLevel().getName();
-      String message = record.getMessage();
-      // record.getParameters();
-      Instant instant = record.getInstant();
-      LocalDateTime now = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
-      return pattern.format(now) + " || " + "instant" + " || " + method + " || " + level + " || " + message;
-    }
+  // DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyy-MM-dd
+  // HH:mm:ss");
+  // String method = record.getSourceMethodName();
+  // String level = record.getLevel().getName();
+  // String message = record.getMessage();
+  // // record.getParameters();
+  // Instant instant = record.getInstant();
+  // LocalDateTime now = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
+  // return pattern.format(now) + " || " + "instant" + " || " + method + " || " +
+  // level + " || " + message;
+  // }
 
-  }
+  // }
 
 }
