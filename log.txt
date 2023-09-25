@@ -1,6 +1,6 @@
-main || INFO || info Message Logging
-main || SEVERE || Error Message
-main || WARNING || Warning Message Logn
-test || INFO || info Message Logging
-test || SEVERE || Error Message
-test || WARNING || Warning Message Logn
+2023-09-25 14:45:12 || instant || main || INFO || info Message Logging
+2023-09-25 14:45:13 || instant || main || SEVERE || Error Message
+2023-09-25 14:45:13 || instant || main || WARNING || Warning Message Logn
+2023-09-25 14:45:13 || instant || test || INFO || info Message Logging
+2023-09-25 14:45:13 || instant || test || SEVERE || Error Message
+2023-09-25 14:45:13 || instant || test || WARNING || Warning Message Logn
